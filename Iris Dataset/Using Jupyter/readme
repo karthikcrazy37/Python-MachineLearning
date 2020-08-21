@@ -1,0 +1,2 @@
+In this project we are going to take 150 observation iris flower all these flowers lies in the following three classes iris-setosa,iris-versicolor,iris-verginica
+The first 4 coloumns contain sepal-length,sepal-width,petal-length,petal-width and the last coloumns contain the class. Here we are going to use 6 algorithm and we can choose the best one
