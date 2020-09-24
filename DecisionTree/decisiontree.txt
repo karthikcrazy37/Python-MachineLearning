@@ -1,0 +1,26 @@
+import numpy as np
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+from sklearn import tree
+#loading Data
+ads=pd.read_csv("L:/Karthik/Classification/P14-Part3-Classification/Section 21 - Decision Tree Classification/Python/Social_Network_Ads.csv")
+ads.head(10)
+ads.info()
+#Separating the independent and dependent 
+X=ads.iloc[:,2:3].values
+Y=ads.iloc[:,-1].values
+#splitting Dataset into test and train
+from sklearn.model_selection import train_test_split
+X_train,X_test,y_train,y_test=train_test_split(X,Y,test_size=0.3,random_state=100)
+#applying the decission tree algorithm to the training set
+clf_entropy=DecisionTreeClassifier(criterion="entropy",random_state=100,max_depth=3,
+                                  min_samples_leaf=5)
+clf_entropy.fit(X_train,y_train)
+#function to make prediction
+y_pred=clf_entropy.predict(X_test)
+y_pred
+#Checking accuracy
+print("The accuracy is",accuracy_score(y_test,y_pred)*100)
+from sklearn.metrics import confusion_matrix
+cm=confusion_matrix(y_test,y_pred)
