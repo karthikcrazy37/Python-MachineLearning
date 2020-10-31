@@ -1,0 +1,28 @@
+name1="Karthik"
+height_mt1=2
+weight_kg1=65
+name2="Abishek"
+height_mt2=1.7
+weight_kg2=150
+name3="Jithesh"
+height_mt3=1.9
+weight_kg3=68
+name4="Naveen"
+height_mt4=1.6
+weight_kg4=70
+def bmi_calculator(name,height_mt,weight_kg):
+    bmi=weight_kg/(height_mt**2)
+    print("bmi:")
+    print(bmi)
+    if bmi<25:
+        return name + "is not Over Weight"
+    else:
+        return name + " Over Weight"
+result1=bmi_calculator(name1,height_mt1,weight_kg1)
+result2=bmi_calculator(name2,height_mt2,weight_kg2)
+result3=bmi_calculator(name3,height_mt3,weight_kg3)
+result4=bmi_calculator(name4,height_mt4,weight_kg4)
+print(result1)
+print(result2)
+print(result3)
+print(result4)
